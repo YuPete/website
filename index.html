@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Peter Yu — systems, agency, and performance engineering." />
+  <title>Peter Yu — Systems &amp; Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="avatar-card.css" />
+</head>
+<body>
+  <nav class="nav" aria-label="Primary navigation"><div class="nav-inner"><a class="nav-mark" href="#top" aria-label="Back to top">ツ</a><a href="#experience">experience</a><a href="#work">work</a><a href="#connect">connect</a></div></nav>
+  <main>
+    <section class="top-section dots" id="top"><div class="page-wrap"><div class="hero-board"><div class="inner-dots"></div><div class="hero-content">
+      <div class="intro-row">
+        <div class="hanging-avatar"><span class="peg"></span><div class="string"></div><div class="avatar-card"><img src="assets/peter-yu.png" alt="Illustrated portrait of Peter Yu" /><div class="avatar-name"><strong>PETER<br />YU</strong><span>NYC · CU '27</span></div></div></div>
+        <div class="identity-card pinned-card"><i></i><i></i><i></i><i></i><p class="eyebrow">✷ builder pass — 2026</p><h1>PETER YU</h1><p class="tagline">I build intelligent systems that remain fast, legible, and under meaningful control.</p><p class="location">NYC · PHILOSOPHY × COMPUTER SCIENCE · COLUMBIA '27</p></div>
+      </div>
+      <div class="proof-area" aria-label="Proof of work"><span class="proof-label">proof of work</span>
+        <a class="hanging resume-card" href="https://yupete.github.io/" target="_blank" rel="noreferrer" aria-label="Read Peter's research paper"><span class="peg"></span><span class="string"></span><span class="paper-lines"><b></b><i></i><i></i><i></i><i></i><em>PAPER ↗</em></span></a>
+        <a class="hanging dap-card" href="https://daplab.cs.columbia.edu/" target="_blank" rel="noreferrer" aria-label="Visit DAPLab"><span class="peg"></span><span class="string"></span><span class="dap-logo"><b>DAP</b><i></i><strong>LAB</strong><small>DATA · AGENTS · PROCESSES</small></span></a>
+        <a class="hanging github-card" href="https://github.com/YuPete" target="_blank" rel="noreferrer" aria-label="Peter on GitHub"><span class="peg"></span><span class="string"></span><span class="github-icon">⌘</span><small>GITHUB</small></a>
+        <div class="hanging columbia-card"><span class="peg"></span><span class="string"></span><span class="shield"><b>CU</b><i>1754</i></span></div>
+        <div class="hanging city-card"><span class="peg"></span><span class="string"></span><span class="city-sign">NYC<br /><i>▦</i></span></div>
+        <div class="hanging systems-card"><span class="peg"></span><span class="string"></span><span class="systems-glyph">&lt;/&gt;<small>systems</small></span></div>
+        <div class="hanging grad-card"><span class="peg"></span><span class="string"></span><span>2027<small>GRAD</small></span></div>
+      </div>
+    </div></div></div></section>
+    <section class="experience-section" id="experience"><div class="page-wrap"><div class="section-title"><span>01</span><h2>experience</h2><p>Systems, performance, and AI-agent infrastructure.</p></div><div class="experience-grid">
+      <article class="experience-card yellow"><span class="card-tab">QUANT SYSTEMS</span><p class="date">2025 · MILLENNIUM MANAGEMENT</p><h3>Quantitative Software Developer Intern</h3><p>Built interpretability and regression infrastructure for portfolio-liquidity optimization; cut a critical data path from 2m 11s to 6s.</p><b class="stamp">21×<small>FASTER</small></b></article>
+      <article class="experience-card blue"><span class="card-tab">RESEARCH</span><p class="date">2025—NOW · COLUMBIA DAPLAB</p><h3>AI Security Researcher</h3><p>Investigating deterministic data-flow controls, provenance, and intervention points for long-horizon AI agents.</p><b class="stamp">DFC<small>AGENT SAFETY</small></b></article>
+      <article class="experience-card coral"><span class="card-tab">AGENT INFRA</span><p class="date">2024 · CRUX DATA</p><h3>Software Engineer</h3><p>Designed orchestration and scheduling infrastructure for multi-agent ETL workflows, with observability and usage tracking built in.</p><b class="stamp">↗<small>ORCHESTRATE</small></b></article>
+    </div></div></section>
+    <section class="work-section dots" id="work"><div class="page-wrap"><div class="section-title"><span>02</span><h2>selected work</h2><p>Things I have built, measured, and kept asking questions about.</p></div><div class="project-list">
+      <a class="project-card compute" href="https://github.com/YuPete/compute" target="_blank" rel="noreferrer"><span class="project-no">01</span><div class="project-art"><b>$ ./compute</b><i>branchless / cache-aware / SIMD</i><em>8×</em></div><div><small>PERFORMANCE ENGINEERING</small><h3>compute</h3><p>Low-level experiments in algorithms, data layout, branch prediction, and what the machine is actually doing.</p></div><span class="arrow">↗</span></a>
+      <a class="project-card speed" href="https://github.com/YuPete/SPEED" target="_blank" rel="noreferrer"><span class="project-no">02</span><div class="project-art"><b>SPEED</b><i>CPU₀ → CPU₁ → CPU₂</i><em>⇄</em></div><div><small>OPERATING SYSTEMS</small><h3>SPEED</h3><p>A Linux scheduler with per-CPU queues, affinity-aware stealing, and load balancing.</p></div><span class="arrow">↗</span></a>
+      <a class="project-card flow-control" href="https://github.com/YuPete/data-flow-control" target="_blank" rel="noreferrer"><span class="project-no">03</span><div class="project-art"><b>input → policy → tool</b><i>provenance / intervention</i><em>✓</em></div><div><small>AGENT SAFETY</small><h3>data flow control</h3><p>Control mechanisms for making agent actions observable, inspectable, and governable.</p></div><span class="arrow">↗</span></a>
+      <a class="project-card aittire" href="https://github.com/YuPete/aittire_code_personal" target="_blank" rel="noreferrer"><span class="project-no">04</span><div class="project-art"><b>AIttire</b><i>personalized generation</i><em>✦</em></div><div><small>GENERATIVE AI / PRODUCT</small><h3>AIttire</h3><p>Infrastructure and product work for visualizing people in custom outfits with generative models.</p></div><span class="arrow">↗</span></a>
+    </div></div></section>
+    <section class="connect-section" id="connect"><div class="page-wrap connect-inner"><div><span class="eyebrow">03 · connect</span><h2>Let’s build something that holds up.</h2></div><a class="mail-card" href="mailto:py2427@columbia.edu">SAY HELLO <b>↗</b></a></div></section>
+  </main>
+  <footer><span>© 2026 PETER YU</span><span>BUILT FOR THE WEB · NYC</span><a href="#top">BACK TO TOP ↑</a></footer><script src="script.js"></script>
+</body></html>
