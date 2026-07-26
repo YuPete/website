@@ -1,0 +1,109 @@
+.badge-strip {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  margin-top: 27px;
+}
+
+.badge-button {
+  position: relative;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.badge-button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.badge {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, .14));
+  transform: none;
+}
+
+.badge--nyc {
+  width: 128px;
+}
+
+.badge--crown {
+  width: 92px;
+}
+
+.badge--chess {
+  width: 86px;
+}
+
+.badge--card {
+  width: 102px;
+}
+
+.badge-caption {
+  position: absolute;
+  z-index: 5;
+  top: -12px;
+  left: 50%;
+  display: none;
+  width: max-content;
+  max-width: 190px;
+  transform: translate(-50%, -100%) rotate(-1.5deg);
+  border: 2px solid var(--ink);
+  background: var(--white);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 8px 10px;
+  color: #2455d6;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.badge-caption::before {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translateX(-50%) rotate(-45deg);
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  background: var(--white);
+  content: '';
+}
+
+.badge-button.is-caption-open .badge-caption {
+  display: block;
+}
+
+.badge-button:hover .badge,
+.badge-button:focus-visible .badge,
+.badge-button.is-wiggling .badge {
+  animation: badge-wiggle .42s ease-in-out;
+}
+
+@keyframes badge-wiggle {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-5deg); }
+  45% { transform: rotate(4deg); }
+  70% { transform: rotate(-2deg); }
+}
+
+@media (max-width: 480px) {
+  .badge-strip {
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .badge--nyc { width: 96px; }
+  .badge--crown { width: 70px; }
+  .badge--chess { width: 66px; }
+  .badge--card { width: 80px; }
+
+  .badge-caption { font-size: 10px; }
+}

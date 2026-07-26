@@ -1,46 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Peter Yu — systems, agency, and performance engineering." />
-  <title>Peter Yu — Systems &amp; Agency</title>
+  <title>~/portfolio — Peter Yu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="avatar-card.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="experience-table.css?v=6" />
+  <link rel="stylesheet" href="org-logos.css?v=1" />
+  <link rel="stylesheet" href="experience-details.css?v=1" />
+  <link rel="stylesheet" href="project-preview.css?v=2" />
+  <link rel="stylesheet" href="project-icons.css?v=5" />
+  <link rel="stylesheet" href="social-stickers.css?v=1" />
+  <link rel="stylesheet" href="ticker.css?v=4" />
+  <link rel="stylesheet" href="window-controls.css" />
+  <style>.boot-message{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;padding:0!important}.boot-message .terminal-command{color:#2455d6;font-weight:800}.boot-message .terminal-output{color:#777}.hero{min-height:570px}.hero-copy{min-width:0}.hero h1 span{display:block}.hero h1 .last-name{transform:translateX(.045em)}.hero-focus{margin:30px 0 0;color:var(--ink);font-size:14px;font-weight:800;letter-spacing:.02em}.hero-meta{margin:24px 0 0;font-size:11px;font-weight:800;line-height:1.9}.hero-meta p{margin:0}.hero-meta span{color:#777;font-weight:500}.hero-meta b{margin:0 7px;color:#777}.quick-stats{grid-template-columns:.8fr 1fr 1.65fr}.quick-stats dd{white-space:nowrap}#home,#experience,#work,#connect{scroll-margin-top:96px}.nav-link,.nav-link:hover{color:var(--ink);opacity:.5}.nav-link.active{color:var(--acid);opacity:1}.nav-separator{opacity:.35}@media(max-width:800px){.quick-stats{grid-template-columns:1fr}.quick-stats dd{white-space:normal}.hero-meta{font-size:9px}}</style>
 </head>
 <body>
-  <nav class="nav" aria-label="Primary navigation"><div class="nav-inner"><a class="nav-mark" href="#top" aria-label="Back to top">ツ</a><a href="#experience">experience</a><a href="#work">work</a><a href="#connect">connect</a></div></nav>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-link active" href="#home">&gt; ./HOME</a><a class="nav-link" href="#experience">&gt; ./EXPERIENCE</a><a class="nav-link" href="#work">&gt; ./WORK</a><a class="nav-link" href="#connect">&gt; ./CONNECT</a><span class="nav-separator" aria-hidden="true">|</span><a class="nav-link" href="about.html">&gt; ./ABOUT</a>
+    </nav>
+    <div class="terminal-bar"><span class="traffic-lights" aria-label="Window controls"><button class="window-control window-control--close" type="button" aria-label="Close page"></button><button class="window-control window-control--minimize" type="button" aria-label="Minimize"></button><button class="window-control window-control--fullscreen" type="button" aria-label="Toggle fullscreen"></button></span><strong>~/portfolio</strong></div>
+  </header>
   <main>
-    <section class="top-section dots" id="top"><div class="page-wrap"><div class="hero-board"><div class="inner-dots"></div><div class="hero-content">
-      <div class="intro-row">
-        <div class="hanging-avatar"><span class="peg"></span><div class="string"></div><div class="avatar-card"><img src="assets/peter-yu.png" alt="Illustrated portrait of Peter Yu" /><div class="avatar-name"><strong>PETER<br />YU</strong><span>NYC · CU '27</span></div></div></div>
-        <div class="identity-card pinned-card"><i></i><i></i><i></i><i></i><p class="eyebrow">✷ builder pass — 2026</p><h1>PETER YU</h1><p class="tagline">I build intelligent systems that remain fast, legible, and under meaningful control.</p><p class="location">NYC · PHILOSOPHY × COMPUTER SCIENCE · COLUMBIA '27</p></div>
+    <section class="hero page-section" id="home">
+      <div class="hero-copy">
+        <pre class="boot-message" aria-label="Profile command"><span class="terminal-command">$ whoami</span>
+<span class="terminal-output">peteryu</span>
+<span class="terminal-command">$ pwd</span>
+<span class="terminal-output">/home/peter/portfolio</span>
+<span class="terminal-command">$ ./profile</span></pre>
+        <h1><span>PETER</span><span class="last-name">YU</span></h1>
+        <p class="hero-focus">&gt; I BUILD HIGH-PERFORMANCE AI SYSTEMS THAT HOLD UP UNDER REAL-WORLD COMPLEXITY.</p>
+        <div class="hero-meta"><p><span>CURRENT:</span> NEW YORK CITY · ET (UTC−4)<b>*</b><span>NEXT:</span> SAN FRANCISCO · PT (UTC−7)<b>*</b>&gt; AGENTS ON PAYROLL: 10+</p></div>
       </div>
-      <div class="proof-area" aria-label="Proof of work"><span class="proof-label">proof of work</span>
-        <a class="hanging resume-card" href="https://yupete.github.io/" target="_blank" rel="noreferrer" aria-label="Read Peter's research paper"><span class="peg"></span><span class="string"></span><span class="paper-lines"><b></b><i></i><i></i><i></i><i></i><em>PAPER ↗</em></span></a>
-        <a class="hanging dap-card" href="https://daplab.cs.columbia.edu/" target="_blank" rel="noreferrer" aria-label="Visit DAPLab"><span class="peg"></span><span class="string"></span><span class="dap-logo"><b>DAP</b><i></i><strong>LAB</strong><small>DATA · AGENTS · PROCESSES</small></span></a>
-        <a class="hanging github-card" href="https://github.com/YuPete" target="_blank" rel="noreferrer" aria-label="Peter on GitHub"><span class="peg"></span><span class="string"></span><span class="github-icon">⌘</span><small>GITHUB</small></a>
-        <div class="hanging columbia-card"><span class="peg"></span><span class="string"></span><span class="shield"><b>CU</b><i>1754</i></span></div>
-        <div class="hanging city-card"><span class="peg"></span><span class="string"></span><span class="city-sign">NYC<br /><i>▦</i></span></div>
-        <div class="hanging systems-card"><span class="peg"></span><span class="string"></span><span class="systems-glyph">&lt;/&gt;<small>systems</small></span></div>
-        <div class="hanging grad-card"><span class="peg"></span><span class="string"></span><span>2027<small>GRAD</small></span></div>
+      <aside class="avatar-terminal">
+        <figure class="avatar-frame"><span class="pin" aria-hidden="true"></span><img src="assets/peter-yu.png" alt="Illustrated portrait of Peter Yu" /><figcaption>ME<span class="cursor">_</span></figcaption></figure>
+        <div class="social-stickers" aria-label="Social profiles"><a href="https://github.com/YuPete" target="_blank" rel="noreferrer" aria-label="Peter Yu on GitHub"><img src="assets/social/github.png" alt="" /></a><a href="https://www.linkedin.com/in/yupeter/" target="_blank" rel="noreferrer" aria-label="Peter Yu on LinkedIn"><img src="assets/social/linkedin.png" alt="" /></a></div>
+      </aside>
+    </section>
+    <div class="ticker between-ticker" aria-hidden="true"><div class="ticker-track"><span>C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC ·</span><span>C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC · C++ · PYTHON · JAVA · LINUX · AI SAFETY · HPC ·</span></div></div>
+    <section class="experience page-section" id="experience">
+      <div class="section-title"><h2>EXPERIENCE</h2></div>
+      <div class="log-table"><div class="log-head"><span>ORG</span><span>ROLE / POSITION</span><span>TIME</span></div>
+        <details class="experience-entry"><summary class="log-row"><img class="org-logo" src="assets/logos/openai.webp" alt="OpenAI logo" /><div><h3>SOFTWARE ENGINEER</h3><small>OpenAI · SEG</small></div><p>FALL 2026</p></summary><div class="experience-detail"><p>I’ll be joining SEG as a software engineer for Fall 2026. More details soon.</p></div></details>
+        <details class="experience-entry"><summary class="log-row"><img class="org-logo" src="assets/logos/millennium.png" alt="Millennium Management logo" /><div><h3>QUANTITATIVE SOFTWARE DEVELOPER INTERN</h3><small>MILLENNIUM MANAGEMENT · EQS</small></div><p>SUMMER 2026</p></summary><div class="experience-detail"><p>I built agent-enabled tools that made portfolio liquidity optimization decisions easier to explain across UAT and production, helping liquidity-risk teams get answers without waiting on manual investigations.</p><ul><li>Built LangGraph and MCP-based interpretability and regression tooling for three portfolio liquidity optimization services, cutting prod–UAT root-cause analysis time by 70% and accelerating production releases.</li><li>Architected a CLI-native C++ gRPC integration that replaced multi-table SQLAlchemy joins with typed service APIs, accelerating benchmarked regression queries by 21× and supporting runs exceeding 190K rows.</li><li>Improved the database MCP server by validating and rewriting queries to follow index-aware patterns, making database access faster and more reliable for Claude Code workflows.</li></ul></div></details>
+        <details class="experience-entry"><summary class="log-row"><img class="org-logo" src="assets/logos/daplab.png" alt="DAPLab logo" /><div><h3>AI SAFETY RESEARCHER</h3><small>COLUMBIA · DAPLab</small></div><p>2025 – PRESENT</p></summary><div class="experience-detail"><p>I research worst-case behaviors of agentic systems in adversarial environments and develop deterministic data-flow controls for safe, interpretable long-horizon execution.</p><ul><li>I studied Google’s CaMeLs provenance-based interpreter and its approach to tracking agent behavior.</li><li>I built a LangGraph agent framework to probe pre- and post-tool-call hooks, inspect metadata, and evaluate interventions that modify or block unsafe tool calls and prompt injections.</li></ul></div></details>
+        <details class="experience-entry"><summary class="log-row"><img class="org-logo" src="assets/logos/crux.webp" alt="Crux logo" /><div><h3>SOFTWARE ENGINEERING INTERN</h3><small>CRUX DATA · ArrayX</small></div><p>SUMMER 2025</p></summary><div class="experience-detail"><p>I built and maintained backend infrastructure for a multi-agent pipeline orchestration platform that automated large-scale ETL workflows with self-healing capabilities.</p><ul><li>Built and maintained backend infrastructure for a multi-agent pipeline orchestration platform automating large-scale ETL workflows with self-healing capabilities.</li><li>Improved response quality by 25% and reduced delegation errors by 30% by splitting a supervisor agent into orchestrator and supervisor agents to reduce cognitive complexity.</li><li>Designed, built, and integrated a new scheduler agent using the OpenAI Agents framework for recurring data-pipeline execution, including prompts and tools such as <code>set schedule</code> and <code>run schedule</code>.</li></ul></div></details>
+        <details class="experience-entry"><summary class="log-row"><img class="org-logo" src="assets/logos/aittire.jfif" alt="AIttire logo" /><div><h3>CO-FOUNDER</h3><small>AIttire.io</small></div><p>SUMMER 2024</p></summary><div class="experience-detail"><p>I co-founded an early-stage AI fashion discovery product for finding clothing from natural-language occasion descriptions, such as a summer party in the South of France.</p><ul><li>Built a web app that generates scenes of users in custom outfits from input prompts, personalizing fashion discovery.</li><li>Fine-tuned an SDXL image-generation model using LoRA to generate custom scenes with user-resembling avatars, improving small-sample generation quality by 40% and reducing training time by 55%.</li><li>Overhauled the app with a microservice architecture across auth, gateway, client, and RabbitMQ services, improving uptime by 20%.</li><li>Replaced brute-force similarity scans over high-dimensional OpenAI CLIP embeddings with Pinecone ANN indexing, reducing per-query search from O(n) to approximately O(log n) and cutting hundreds of milliseconds of latency per search.</li><li>Containerized services with individual Dockerfiles and deployed with Kubernetes YAML specs, improving throughput and decreasing queue length by 15%.</li></ul></div></details>
       </div>
-    </div></div></div></section>
-    <section class="experience-section" id="experience"><div class="page-wrap"><div class="section-title"><span>01</span><h2>experience</h2><p>Systems, performance, and AI-agent infrastructure.</p></div><div class="experience-grid">
-      <article class="experience-card yellow"><span class="card-tab">QUANT SYSTEMS</span><p class="date">2025 · MILLENNIUM MANAGEMENT</p><h3>Quantitative Software Developer Intern</h3><p>Built interpretability and regression infrastructure for portfolio-liquidity optimization; cut a critical data path from 2m 11s to 6s.</p><b class="stamp">21×<small>FASTER</small></b></article>
-      <article class="experience-card blue"><span class="card-tab">RESEARCH</span><p class="date">2025—NOW · COLUMBIA DAPLAB</p><h3>AI Security Researcher</h3><p>Investigating deterministic data-flow controls, provenance, and intervention points for long-horizon AI agents.</p><b class="stamp">DFC<small>AGENT SAFETY</small></b></article>
-      <article class="experience-card coral"><span class="card-tab">AGENT INFRA</span><p class="date">2024 · CRUX DATA</p><h3>Software Engineer</h3><p>Designed orchestration and scheduling infrastructure for multi-agent ETL workflows, with observability and usage tracking built in.</p><b class="stamp">↗<small>ORCHESTRATE</small></b></article>
-    </div></div></section>
-    <section class="work-section dots" id="work"><div class="page-wrap"><div class="section-title"><span>02</span><h2>selected work</h2><p>Things I have built, measured, and kept asking questions about.</p></div><div class="project-list">
-      <a class="project-card compute" href="https://github.com/YuPete/compute" target="_blank" rel="noreferrer"><span class="project-no">01</span><div class="project-art"><b>$ ./compute</b><i>branchless / cache-aware / SIMD</i><em>8×</em></div><div><small>PERFORMANCE ENGINEERING</small><h3>compute</h3><p>Low-level experiments in algorithms, data layout, branch prediction, and what the machine is actually doing.</p></div><span class="arrow">↗</span></a>
-      <a class="project-card speed" href="https://github.com/YuPete/SPEED" target="_blank" rel="noreferrer"><span class="project-no">02</span><div class="project-art"><b>SPEED</b><i>CPU₀ → CPU₁ → CPU₂</i><em>⇄</em></div><div><small>OPERATING SYSTEMS</small><h3>SPEED</h3><p>A Linux scheduler with per-CPU queues, affinity-aware stealing, and load balancing.</p></div><span class="arrow">↗</span></a>
-      <a class="project-card flow-control" href="https://github.com/YuPete/data-flow-control" target="_blank" rel="noreferrer"><span class="project-no">03</span><div class="project-art"><b>input → policy → tool</b><i>provenance / intervention</i><em>✓</em></div><div><small>AGENT SAFETY</small><h3>data flow control</h3><p>Control mechanisms for making agent actions observable, inspectable, and governable.</p></div><span class="arrow">↗</span></a>
-      <a class="project-card aittire" href="https://github.com/YuPete/aittire_code_personal" target="_blank" rel="noreferrer"><span class="project-no">04</span><div class="project-art"><b>AIttire</b><i>personalized generation</i><em>✦</em></div><div><small>GENERATIVE AI / PRODUCT</small><h3>AIttire</h3><p>Infrastructure and product work for visualizing people in custom outfits with generative models.</p></div><span class="arrow">↗</span></a>
-    </div></div></section>
-    <section class="connect-section" id="connect"><div class="page-wrap connect-inner"><div><span class="eyebrow">03 · connect</span><h2>Let’s build something that holds up.</h2></div><a class="mail-card" href="mailto:py2427@columbia.edu">SAY HELLO <b>↗</b></a></div></section>
+    </section>
+    <section class="work page-section" id="work">
+      <div class="work-directory"><div class="directory-heading"><p>PATH: ~/select_projects</p><h2>$ ls -la ~/select_projects</h2></div>
+        <div class="project-files" role="list"><button class="project-file selected" data-project="compute" type="button"><img class="project-icon" src="assets/project-icons/compute-cpu-transparent.png" alt="" /><span><b>compute/</b><small>C · LINUX · SCHEDULER</small></span><em>git</em></button><button class="project-file" data-project="speed" type="button"><img class="project-icon project-icon--speed" src="assets/project-icons/speed-stripes-transparent.png" alt="" /><span><b>SPEED/</b><small>C++ · BRANCHLESS · SIMD</small></span><em>git</em></button><button class="project-file" data-project="dfc" type="button"><img class="project-icon" src="assets/project-icons/data-flow-robot-transparent.png" alt="" /><span><b>data-flow-control/</b><small>PYTHON · AGENT SAFETY</small></span><em>git</em></button><button class="project-file" data-project="aittire" type="button"><span class="file-icon">◇</span><span><b>aittire_code_personal/</b><small>PYTHON · GENERATIVE AI</small></span><em>git</em></button></div>
+      </div>
+      <aside class="preview-panel"><div class="preview-heading"><b>$ cat README.md</b><i></i></div><div class="preview-box" id="preview-box"><p class="preview-index" id="preview-index">01</p><div class="preview-art" id="preview-art" style="background:#aeeeff"><b>$ ./compute</b><span>PER-CPU QUEUES<br />AFFINITY-AWARE<br />STEALING</span><strong>⇄</strong></div><div class="preview-copy"><h3 id="preview-title">COMPUTE</h3><p id="preview-description">Explored Linux scheduler architectures for compute-intensive workloads, selecting a per-CPU run queue design with 100 ms round-robin time slices, least-loaded CPU placement, and affinity-aware task stealing.</p></div></div><div><h3 class="tag-label">TOPICS:</h3><div class="tags" id="tech-tags"><span>LINUX</span><span>C</span><span>SCHEDULER</span></div></div><a class="button solid full" id="project-link" href="https://github.com/YuPete/compute" target="_blank" rel="noreferrer">OPEN REPOSITORY ↗</a></aside>
+    </section>
+    <section class="connect page-section" id="connect"><h2>LET'S BUILD SOMETHING CHALLENGING.</h2><a class="button neon" href="mailto:hy2846@columbia.edu">EMAIL ME ↗</a></section>
   </main>
-  <footer><span>© 2026 PETER YU</span><span>BUILT FOR THE WEB · NYC</span><a href="#top">BACK TO TOP ↑</a></footer><script src="script.js"></script>
-</body></html>
+  <script src="script.js?v=2"></script>
+  <script src="window-controls.js"></script>
+</body>
+</html>
