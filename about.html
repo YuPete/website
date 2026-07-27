@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="About Peter Yu" />
-  <title>About — Peter Yu</title>
+  <title>About - Peter Yu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=4" />
-  <link rel="stylesheet" href="about.css?v=2" />
-  <link rel="stylesheet" href="badges.css?v=4" />
+  <link rel="stylesheet" href="about.css?v=9" />
+  <link rel="stylesheet" href="badges.css?v=7" />
   <link rel="stylesheet" href="window-controls.css" />
   <style>.nav-link,.nav-link:hover{color:var(--ink);opacity:.5}.nav-link.active{color:var(--acid);opacity:1}.nav-separator{opacity:.35}</style>
 </head>
@@ -23,19 +23,49 @@
   </header>
   <main>
     <section class="about page-section" id="about">
-      <div class="about-title"><h2>ABOUT</h2><p>A LITTLE MORE ABOUT ME.</p></div>
       <div class="about-grid">
-        <div class="about-photo" aria-label="Photo placeholder"><span>PHOTO<br />COMING SOON</span></div>
+        <figure class="about-photo">
+          <span class="pushpin" aria-hidden="true"></span>
+          <img src="assets/peter-nyc.png" alt="Peter Yu by the Brooklyn Bridge in New York City" />
+          <figcaption>SEAS CRUISE PETER // EAST RIVER</figcaption>
+        </figure>
         <div class="about-copy">
-          <p class="about-label">INTRODUCTION</p>
-          <p class="about-placeholder">A short introduction will go here.</p>
-          <div class="about-interests"><p>INTERESTS</p><div class="badge-strip" aria-label="Personal interests"><button class="badge-button" type="button" data-blurb="New York: Home" onclick="showBadgeBlurb(this)" aria-label="Show New York City blurb"><img class="badge badge--nyc" src="assets/badges/nyc-transparent.png" alt="" /><span class="badge-caption">New York: Home</span></button><button class="badge-button" type="button" data-blurb="Columbia '27 · CS + Philosophy" onclick="showBadgeBlurb(this)" aria-label="Show Columbia blurb"><img class="badge badge--crown" src="assets/badges/crown-transparent.png" alt="" /><span class="badge-caption">Columbia '27<br />CS + Philosophy</span></button><button class="badge-button" type="button" data-blurb="D4 D5 c4" onclick="showBadgeBlurb(this)" aria-label="Show chess blurb"><img class="badge badge--chess" src="assets/badges/chess-transparent.png" alt="" /><span class="badge-caption">D4 D5 c4</span></button><button class="badge-button" type="button" aria-label="Wiggle illustrated card sticker"><img class="badge badge--card" src="assets/badges/card.png" alt="" /></button></div></div>
+          <div class="about-introduction">
+            <p class="about-placeholder">Hi, Im Peter!</p>
+            <div class="about-notes">
+              <p>I am a student at Columbia University in NYC, double majoring in Philosophy and Computer Science.</p>
+              <p>I have loved puzzles my whole life, playing go and chess from a young age. This love for abstract puzzles led me to discover and fall in love with programming, which has enabled me to tackle bigger and more fascinating problems.</p>
+              <p>To build good products in the fast paced startup environments of my first two summers, I have learned to wear many hats: PM, engineer, designer and more. As such, I acquired the tools that it takes to translate new technological breakthroughs to real features and products, from reaching out to HuggingFace devs directly to tinkering with fine tuning parameters, and clear communications across many teams.</p>
+              <p>I have always been a maker. As a long time ceramicist, I love turning a piece of clay into the physical expression of an idea or vision. Each piece takes shape through a process of pulling, compressing, trimming, and glazing small decisions that build on one another until the final form emerges. I bring that same iterative process to my work: shaping ideas through rapid experimentation, learning from each version, and refining them into products that are thoughtful and useful.</p>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="about-interests">
+        <div class="badge-board" aria-label="Personal badges">
+          <button class="badge-button badge-button--nyc" type="button" aria-label="New York City, powered by John's of Bleecker and humidity. UTC minus 4."><span class="board-pin" aria-hidden="true"></span><img class="badge badge--nyc" src="assets/badges/nyc-transparent.png" alt="" /><span class="badge-caption">New York City, powered by John&apos;s of Bleecker and humidity. // UTC-4</span></button>
+          <button class="badge-button badge-button--school" type="button" aria-label="Columbia - '27 Philosophy and Computer Science"><span class="board-pin" aria-hidden="true"></span><img class="badge badge--crown" src="assets/badges/crown-transparent.png" alt="" /><span class="badge-caption">Columbia - &apos;27 Philosophy and Computer Science</span></button>
+          <button class="badge-button badge-button--chess" type="button" aria-label="d4 greater than e4"><span class="board-pin" aria-hidden="true"></span><img class="badge badge--chess" src="assets/badges/chess-transparent.png" alt="" /><span class="badge-caption">d4 &gt; e4</span></button>
+          <button class="badge-button badge-button--spikeball" type="button" aria-label="I love Spikeball"><span class="board-pin" aria-hidden="true"></span><img class="badge badge--spikeball" src="assets/spikeball-transparent.png" alt="Spikeball net" /><span class="badge-caption">I loveee Spikeball.</span></button>
+          <button class="badge-button badge-button--book" type="button" aria-label="My favorite book"><span class="board-pin" aria-hidden="true"></span><img class="badge badge--book" src="assets/brave-new-world.png" alt="Brave New World by Aldous Huxley" /><span class="badge-caption">fav book</span></button>
+          <button class="badge-button badge-button--vim" type="button" aria-label="Vim greater than Emacs"><span class="board-pin" aria-hidden="true"></span><img class="badge badge--vim" src="assets/vim-shield-sticker.png" alt="Vim shield logo" /><span class="badge-caption">Vim &gt; Emacs</span></button>
+          <button class="badge-button badge-button--card" type="button" aria-label="River merchant"><span class="board-pin" aria-hidden="true"></span><img class="badge badge--card" src="assets/badges/card.png" alt="" /><span class="badge-caption">river merchant</span></button>
+        </div>
+      </div>
+      <div class="about-afterword">
+        <p>When I&apos;m not working, I love exploring new and old food spots around the city. I&apos;m a big Beli-er and pickleball player, and I try to make time for the gym, meal prep, and journaling. While I&apos;m fascinated by many areas of philosophy, I&apos;m especially drawn to consciousness and free will. On this note, I&apos;m a substrate-independent physicalist and compatibilist.</p>
+        <p>As someone who didn&apos;t start coding before they could walk, I know how daunting it can be to start building experience and a network early in college. If you&apos;re looking for early-career advice, or just want to talk philosophy, feel free to send me a message on <a href="https://www.linkedin.com/in/yupeter/" target="_blank" rel="noreferrer">LinkedIn</a>. I&apos;ll do my best to respond to everyone.</p>
+      </div>
+      <div class="about-moments" aria-label="Photo moments">
+        <figure class="moment-photo"><img src="assets/moments-3218.jpeg" alt="A meal shared at a restaurant" /><figcaption>my favorite vases</figcaption></figure>
+        <figure class="moment-photo"><img src="assets/moments-8579.jpg" alt="A nighttime city moment" /><figcaption>golden gai, tokyo</figcaption></figure>
+        <figure class="moment-photo"><img src="assets/moments-7235.jpeg" alt="A live performance" /><figcaption>masayoshi takanaka!</figcaption></figure>
+        <figure class="moment-photo"><img src="assets/moments-5132.jpeg" alt="Friends at an event" /><figcaption>just two boys</figcaption></figure>
       </div>
     </section>
   </main>
   <footer><div class="footer-status"><span>BUILT IN NYC</span><span>COLUMBIA '27</span><span>C++ / PYTHON / LINUX</span></div></footer>
-  <script src="badges.js?v=3"></script>
+  <script src="badges.js?v=6"></script>
   <script src="window-controls.js"></script>
 </body>
 </html>

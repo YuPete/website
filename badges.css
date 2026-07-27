@@ -1,109 +1,56 @@
-.badge-strip {
-  display: flex;
-  align-items: end;
-  gap: 20px;
-  margin-top: 27px;
-}
+.badge-board { position: relative; width: calc(100% - 12px); min-height: 500px; margin: 0 0 12px; overflow: hidden; border: 2px solid var(--ink); background-color: var(--white); background-image: radial-gradient(#c7c7c7 1.2px, transparent 1.3px); background-size: 16px 16px; box-shadow: 12px 12px 0 var(--ink); }
 
-.badge-button {
-  position: relative;
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
+.badge-button { position: absolute; top: var(--badge-y, 0); left: var(--badge-x, 0); border: 0; padding: 0; background: transparent; cursor: pointer; }
+.badge-button:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.badge { display: block; height: auto; object-fit: contain; filter: drop-shadow(2px 3px 1px rgba(0, 0, 0, .25)); transform: none; }
+.badge--nyc { width: 126px; }
+.badge--crown { width: 128px; }
+.badge--chess { width: 94px; }
+.badge--card { width: 108px; }
+.badge--spikeball { width: 140px; }
+.badge--book { width: 102px; }
+.badge--vim { width: 96px; }
 
-.badge-button:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 4px;
-}
+.board-pin { position: absolute; z-index: 3; top: calc(50% - var(--pin-offset, 65px)); left: 50%; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 3px solid var(--ink); border-radius: 50%; background: #f7f3e8; box-shadow: 1px 2px 0 var(--ink); cursor: grab; touch-action: none; }
+.badge-button.is-dragging .badge-caption { display: none !important; }
+.badge-button.is-dragging .badge { animation: none !important; }
+.badge-button--nyc { --badge-x: 14%; --badge-y: 24%; }
+.badge-button--school { --pin-offset: 61px; --badge-x: 42%; --badge-y: 70%; }
+.badge-button--chess { --pin-offset: 55px; --badge-x: 21%; --badge-y: 66%; }
+.badge-button--spikeball { --pin-offset: 46px; --badge-x: 36%; --badge-y: 25%; }
+.badge-button--book { --pin-offset: 68px; --badge-x: 56%; --badge-y: 16%; }
+.badge-button--vim { --pin-offset: 79px; --badge-x: 63%; --badge-y: 66%; }
+.badge-button--card { --pin-offset: 79px; --badge-x: 75%; --badge-y: 19%; }
 
-.badge {
-  display: block;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, .14));
-  transform: none;
-}
+.text-badge { display: grid; place-items: center; min-width: 76px; min-height: 76px; border: 3px solid var(--ink); background: #fffdf5; box-shadow: 4px 4px 0 var(--ink); color: var(--ink); font-size: 22px; font-weight: 800; line-height: .88; text-align: center; }
+.text-badge small { margin-top: 8px; padding: 4px; background: var(--ink); color: var(--white); font-size: 7px; font-weight: 800; letter-spacing: -.05em; }
+.text-badge--ideas { min-width: 68px; min-height: 87px; background: #ed75a9; font-size: 16px; line-height: .8; }
+.text-badge--ideas b { font-size: 27px; }
+.text-badge--build { min-width: 93px; min-height: 66px; background: #f5cf33; font-size: 16px; line-height: 1; }
+.text-badge--build span { display: block; text-align: left; animation: build-cursor 1s step-end infinite; }
 
-.badge--nyc {
-  width: 128px;
-}
+.badge-caption { position: absolute; z-index: 5; top: -12px; left: 50%; display: none; width: max-content; max-width: 190px; transform: translate(-50%, -100%) rotate(-1.5deg); border: 2px solid var(--ink); background: var(--white); box-shadow: 3px 3px 0 var(--ink); padding: 8px 10px; color: var(--acid); font-size: 11px; font-weight: 800; line-height: 1.35; text-align: left; white-space: nowrap; pointer-events: none; }
+.badge-button--nyc .badge-caption, .badge-button--school .badge-caption, .badge-button--book .badge-caption { width: 190px; white-space: normal; text-align: center; }
+.badge-button.is-hovered .badge-caption { display: block; position: fixed; left: var(--bubble-x); top: var(--bubble-y); transform: translate(-50%, -50%) rotate(-1.5deg); }
+.badge-button:hover .badge-caption, .badge-button:focus-visible .badge-caption { display: block; }
+.badge-button:hover .badge, .badge-button:focus-visible .badge, .badge-button.is-hovered .badge { transform-origin: top center; animation: badge-swing 1.1s ease-in-out infinite; }
 
-.badge--crown {
-  width: 92px;
-}
+@keyframes badge-swing { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-5deg); } 50% { transform: rotate(4deg); } 75% { transform: rotate(-2deg); } }
+@keyframes build-cursor { 50% { opacity: 0; } }
 
-.badge--chess {
-  width: 86px;
-}
-
-.badge--card {
-  width: 102px;
-}
-
-.badge-caption {
-  position: absolute;
-  z-index: 5;
-  top: -12px;
-  left: 50%;
-  display: none;
-  width: max-content;
-  max-width: 190px;
-  transform: translate(-50%, -100%) rotate(-1.5deg);
-  border: 2px solid var(--ink);
-  background: var(--white);
-  box-shadow: 3px 3px 0 var(--ink);
-  padding: 8px 10px;
-  color: #2455d6;
-  font-size: 11px;
-  font-weight: 800;
-  line-height: 1.35;
-  text-align: left;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.badge-caption::before {
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  transform: translateX(-50%) rotate(-45deg);
-  border-right: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
-  background: var(--white);
-  content: '';
-}
-
-.badge-button.is-caption-open .badge-caption {
-  display: block;
-}
-
-.badge-button:hover .badge,
-.badge-button:focus-visible .badge,
-.badge-button.is-wiggling .badge {
-  animation: badge-wiggle .42s ease-in-out;
-}
-
-@keyframes badge-wiggle {
-  0%, 100% { transform: rotate(0); }
-  20% { transform: rotate(-5deg); }
-  45% { transform: rotate(4deg); }
-  70% { transform: rotate(-2deg); }
-}
-
-@media (max-width: 480px) {
-  .badge-strip {
-    gap: 10px;
-    margin-top: 22px;
-  }
-
-  .badge--nyc { width: 96px; }
-  .badge--crown { width: 70px; }
-  .badge--chess { width: 66px; }
-  .badge--card { width: 80px; }
-
+@media (max-width: 680px) {
+  .badge-board { display: grid; grid-template-columns: repeat(3, minmax(82px, 1fr)); align-items: center; min-height: 440px; }
+  .badge--nyc { width: 112px; }
+  .badge--crown { width: 104px; }
+  .badge--chess { width: 82px; }
+  .badge--card { width: 92px; }
+  .badge--spikeball { width: 115px; }
+  .badge--book { width: 88px; }
+  .badge--vim { width: 82px; }
+  .text-badge--code { min-width: 68px; min-height: 68px; font-size: 19px; }
+  .text-badge--ideas { min-width: 61px; min-height: 76px; }
+  .text-badge--build { min-width: 82px; min-height: 60px; }
   .badge-caption { font-size: 10px; }
+  .badge-button { position: relative; top: 0; left: 0; justify-self: center; }
+  .board-pin { cursor: default; }
 }
