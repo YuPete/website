@@ -2,9 +2,38 @@ const projects = {
   compute: { index: '01', title: 'COMPUTE', art: '$ ./compute', detail: 'PER-CPU QUEUES<br>AFFINITY-AWARE<br>STEALING', mark: '⇄', tags: ['LINUX', 'C', 'SCHEDULER'], description: 'Explored Linux scheduler architectures for compute-intensive workloads, selecting a per-CPU run queue design with 100 ms round-robin time slices, least-loaded CPU placement, and affinity-aware task stealing.', href: 'https://github.com/YuPete/compute', linkLabel: 'OPEN REPOSITORY ↗', color: '#aeeeff' },
   speed: { index: '02', title: 'SPEED', art: '$ ./SPEED', detail: 'BRANCHLESS<br>CACHE-AWARE<br>SIMD', mark: '8×', tags: ['C++', 'BRANCHLESS', 'CACHE-AWARE', 'SIMD'], description: 'Explored high-performance C++ algorithms that outperform STL baselines through branchless code, cache-aware data layouts, and SIMD vectorization.', href: 'https://github.com/YuPete/SPEED', linkLabel: 'OPEN REPOSITORY ↗', color: '#fff5ba' },
   dfc: { index: '03', title: 'DATA FLOW CONTROL', art: 'INPUT → POLICY → TOOL', detail: 'ANTI-PROMPT<br>INJECTION<br>GOVERNANCE', mark: '✓', tags: ['AI SAFETY', 'PROMPT INJECTION', 'AGENTS'], description: 'Anti–prompt-injection controls that make agent actions observable, inspectable, and governable.', href: 'https://yupete.github.io/', linkLabel: 'READ PAPER ↗', color: '#d8f5bd' },
-  aittire: { index: '04', title: 'AITTIRE', art: 'AIttire', detail: 'PERSONALIZED<br>VISUAL<br>GENERATION', mark: '✦', tags: ['GEN AI', 'PRODUCT', 'PYTHON'], description: 'Infrastructure and product work for visualizing people in custom outfits with generative models.', href: 'https://github.com/YuPete/aittire_code_personal', linkLabel: 'OPEN REPOSITORY ↗', color: '#ffc2bc' }
+  aittire: { index: '04', title: 'AITTIRE', art: 'AIttire', detail: 'PERSONALIZED<br>VISUAL<br>GENERATION', mark: '✦', tags: ['GEN AI', 'PRODUCT', 'PYTHON'], description: 'Infrastructure and product work for visualizing people in custom outfits with generative models.', href: 'https://github.com/YuPete/aittire_code_personal', linkLabel: 'OPEN REPOSITORY ↗', color: '#ffc2bc' },
+  consciousness: {
+    index: '05',
+    title: 'CONSCIOUS COMPUTERS OR COMPLETELY DARK',
+    image: 'assets/project-icons/conscious-computers.png',
+    imageAlt: 'Vintage anatomical illustration of a cross-section of the human brain',
+    tags: ['AI CONSCIOUSNESS', 'PHILOSOPHY', 'ALIGNMENT'],
+    descriptionHtml: `<p>I wrote this paper for Professor Brian Greene’s <em>Origins and Meaning</em> course at Columbia, exploring whether increasingly capable AI systems could ever be meaningfully described as conscious.</p>
+      <p>My central argument is that <strong>intelligence and consciousness are fundamentally distinct</strong>: a system can exhibit sophisticated, human-like behavior without possessing subjective experience, meaning capability alone cannot establish consciousness or moral status.</p>
+      <p>I also explore potential ways to test machine consciousness, including probing an AI’s understanding of identity and mind-body separation and adapting <strong>Mary’s Room</strong> into an experiment that tests whether an AI encounters genuinely novel subjective experience after receiving all available factual information about something it has never sensed.</p>
+      <p>The paper ultimately frames machine consciousness as an alignment problem: as AI systems become more capable, we may need to determine when they deserve moral consideration despite lacking a definitive theory or test of consciousness.</p>`,
+    href: 'assets/papers/origins-and-meaning.pdf',
+    linkLabel: 'READ PAPER (PDF) ↗',
+    color: '#f4e2cc'
+  }
 };
 const preview = { index: document.querySelector('#preview-index'), title: document.querySelector('#preview-title'), description: document.querySelector('#preview-description'), art: document.querySelector('#preview-art'), tags: document.querySelector('#tech-tags'), link: document.querySelector('#project-link'), box: document.querySelector('#preview-box') };
-document.querySelectorAll('.project-file').forEach((file) => file.addEventListener('click', () => { const project = projects[file.dataset.project]; document.querySelectorAll('.project-file').forEach((item) => item.classList.toggle('selected', item === file)); preview.index.textContent = project.index; preview.title.textContent = project.title; preview.description.textContent = project.description; preview.art.innerHTML = `<b>${project.art}</b><span>${project.detail}</span><strong>${project.mark}</strong>`; preview.art.style.background = project.color; preview.tags.innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join(''); preview.link.href = project.href; preview.link.textContent = project.linkLabel; preview.box.animate([{ backgroundColor: '#7a1f35' }, { backgroundColor: '#ebebea' }], { duration: 380, easing: 'ease-out' }); }));
+document.querySelectorAll('.project-file').forEach((file) => file.addEventListener('click', () => {
+  const project = projects[file.dataset.project];
+  document.querySelectorAll('.project-file').forEach((item) => item.classList.toggle('selected', item === file));
+  preview.index.textContent = project.index;
+  preview.title.textContent = project.title;
+  preview.description.innerHTML = project.descriptionHtml || `<p>${project.description}</p>`;
+  preview.art.classList.toggle('preview-art--image', Boolean(project.image));
+  preview.art.innerHTML = project.image
+    ? `<img src="${project.image}" alt="${project.imageAlt}" />`
+    : `<b>${project.art}</b><span>${project.detail}</span><strong>${project.mark}</strong>`;
+  preview.art.style.background = project.color;
+  preview.tags.innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join('');
+  preview.link.href = project.href;
+  preview.link.textContent = project.linkLabel;
+  preview.box.animate([{ backgroundColor: '#7a1f35' }, { backgroundColor: '#ebebea' }], { duration: 380, easing: 'ease-out' });
+}));
 const links = [...document.querySelectorAll('.nav-link[href^="#"]')]; const sections = links.map((link) => document.querySelector(link.getAttribute('href'))); const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) links.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`)); }), { rootMargin: '-35% 0px -55% 0px' }); sections.forEach((section) => observer.observe(section));
 links.forEach((link) => link.addEventListener('click', () => links.forEach((item) => item.classList.toggle('active', item === link))));

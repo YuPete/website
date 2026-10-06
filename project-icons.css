@@ -26,6 +26,10 @@
   filter: invert(1);
 }
 
+.project-file .project-icon--paper {
+  filter: grayscale(1);
+}
+
 @media (max-width: 480px) {
   .project-file {
     grid-template-columns: 30px 1fr;
